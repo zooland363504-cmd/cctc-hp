@@ -1,0 +1,57 @@
+:root{--ink:#1a1a1a;--paper:#faf8f5;--sub:#6b6b6b;--line:#dcd8d2;--accent:#b08d57}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Hiragino Mincho ProN","Yu Mincho","Noto Serif JP",serif;color:var(--ink);background:var(--paper);line-height:2;letter-spacing:.04em}
+a{color:inherit}
+header{position:fixed;top:0;left:0;right:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:18px 5vw;background:rgba(250,248,245,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.logo{font-size:1.3rem;letter-spacing:.35em;text-decoration:none;font-weight:600}
+nav{display:flex;gap:2rem}
+nav a{font-family:"Hiragino Sans","Yu Gothic","Noto Sans JP",sans-serif;font-size:.78rem;text-decoration:none;letter-spacing:.15em;color:var(--sub);position:relative;padding-bottom:3px}
+nav a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--accent);transition:.3s}
+nav a:hover{color:var(--ink)}nav a:hover::after{width:100%}
+.hero{height:100vh;min-height:560px;display:grid;grid-template-columns:1.1fr 1fr;align-items:center;padding:0 5vw;gap:5vw}
+.hero .copy .en{font-family:"Hiragino Sans","Yu Gothic",sans-serif;font-size:.75rem;letter-spacing:.4em;color:var(--accent)}
+.hero h1{font-weight:400;font-size:clamp(1.8rem,4.2vw,3.2rem);line-height:1.6;margin:1.2rem 0}
+.hero .name{color:var(--sub);font-size:.95rem}
+.hero .go{display:inline-block;margin-top:2.4rem;font-family:"Hiragino Sans","Yu Gothic",sans-serif;font-size:.8rem;letter-spacing:.25em;text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:6px;transition:.3s}
+.hero .go:hover{color:var(--accent);border-color:var(--accent);padding-right:1.2rem}
+.hero .pic{height:72vh;background:url("https://static.wixstatic.com/media/b8b889_637dbf4efa2743aea9eae94943f41a8d~mv2_d_1632_1224_s_2.jpg") center/cover;filter:grayscale(.55) contrast(1.05)}
+.notice{border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center;padding:1.1rem 5vw;font-size:.9rem;letter-spacing:.2em}
+section{padding:130px 5vw}
+.inner{max-width:900px;margin:0 auto}
+.label{font-family:"Hiragino Sans","Yu Gothic",sans-serif;font-size:.7rem;letter-spacing:.45em;color:var(--accent);display:block;margin-bottom:.6rem}
+h2{font-weight:400;font-size:clamp(1.5rem,3vw,2rem);letter-spacing:.2em;margin-bottom:2rem}
+h2::after{content:"";display:block;width:48px;height:1px;background:var(--ink);margin-top:1.2rem}
+.lead{font-size:1.05rem}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:3rem}
+.col h3{font-weight:400;font-size:1rem;letter-spacing:.15em;border-bottom:1px solid var(--line);padding-bottom:.5rem;margin-bottom:.8rem}
+.events{list-style:none;display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;color:var(--sub)}
+.events li::before{content:"・"}
+table{width:100%;border-collapse:collapse;margin-top:1rem}
+th,td{padding:1.1rem .5rem;text-align:left;border-bottom:1px solid var(--line);font-weight:400}
+th{font-family:"Hiragino Sans","Yu Gothic",sans-serif;font-size:.72rem;letter-spacing:.25em;color:var(--sub)}
+td.day{font-size:1.15rem}
+.note{font-size:.88rem;color:var(--sub);margin-top:1rem}
+.alt{background:#f1ede7}
+.cal,.form{margin-top:2rem;border:1px solid var(--line);background:#fff}
+.cal iframe{display:block;width:100%;height:600px;border:0}
+.form iframe{display:block;width:100%;height:760px;border:0}
+.placeholder{padding:4rem 1rem;text-align:center;color:var(--sub);font-size:.9rem}
+.venue p{margin-bottom:.4rem}
+.venue .addr{color:var(--accent);font-size:.9rem}
+.rules{margin-top:1rem;padding-left:1.2rem;color:#333;font-size:.95rem}
+.rules li{margin-bottom:.6rem}
+.post{border-top:1px solid var(--line);padding:1.6rem 0}
+.post h3{font-weight:400;font-size:1.05rem;letter-spacing:.1em;margin-bottom:.3rem}
+.post p{font-size:.92rem;color:var(--sub)}
+.past{margin-top:1.5rem;font-size:.88rem;color:var(--sub)}
+.past li{margin-left:1.2rem}
+footer{text-align:center;padding:3rem 5vw;font-size:.75rem;letter-spacing:.2em;color:var(--sub);border-top:1px solid var(--line)}
+@media(max-width:720px){
+ header{flex-direction:column;align-items:flex-start;padding:10px 5vw 6px;gap:4px}
+ nav{gap:1.2rem;overflow-x:auto;max-width:100%}nav a{white-space:nowrap}
+ .hero{grid-template-columns:1fr;height:auto;padding:130px 5vw 60px}
+ .hero .pic{height:40vh;order:-1}
+ .two{grid-template-columns:1fr;gap:2rem}
+ section{padding:80px 5vw}
+}
